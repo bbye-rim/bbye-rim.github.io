@@ -31,7 +31,7 @@ header {
     align-items: center;
 }
 header path {
-    animation: logo 1s linear forwards;
+    animation: logo 2s linear forwards;
 }
 @keyframes logo {
     to {
