@@ -1,0 +1,207 @@
+@charset "utf-8";
+:root {
+    --color1: #EF9A9AAA; /*빨강*/
+    --color2: #F3CCADAA; /*주황*/
+    --color3: #FFF176AA; /*노랑*/
+    --color4: #C8E6C9AA; /*초록*/
+    --color5: #A9E1EDAA; /*파랑*/
+    --color6: #E1BEE7AA; /*보라*/
+    --color7: #B0BEC5AA; /*회색*/
+    --color8: #D9C7B8; /*연한갈색*/
+    --color9: #A6896F; /*갈색*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+header {
+    border-bottom: 2px solid black;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header path {
+    animation: logo 1s linear forwards;
+}
+@keyframes logo {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+header path:nth-child(1) {
+    stroke-dasharray: 210px;
+    stroke-dashoffset: 156px;
+}
+header path:nth-child(2) {
+    stroke-dasharray: 151px;
+    stroke-dashoffset: 158px;
+}
+header path:nth-child(3) {
+    stroke-dasharray: 142px;
+    stroke-dashoffset: 31px;
+}
+header path:nth-child(4) {
+    stroke-dasharray: 156px;
+    stroke-dashoffset: 167px;
+}
+header path:nth-child(5) {
+    stroke-dasharray: 197px;
+    stroke-dashoffset: 151px;
+}
+header path:nth-child(6) {
+    stroke-dasharray: 156px;
+    stroke-dashoffset: 210px;
+}
+header path:nth-child(7) {
+    stroke-dasharray: 158px;
+    stroke-dashoffset: 151px;
+}
+header path:nth-child(8) {
+    stroke-dasharray: 142px;
+    stroke-dashoffset: 158px;
+}
+header path:nth-child(9) {
+    stroke-dasharray: 156px;
+    stroke-dashoffset: 167px;
+}
+header path:nth-child(10) {
+    stroke-dasharray: 151px;
+    stroke-dashoffset: 197px;
+}
+header path:nth-child(11) {
+    stroke-dasharray: 142px;
+    stroke-dashoffset: 167px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+}
+aside {
+    width: 200px;
+    height: 700px;
+    padding-top: 20px;
+    background-color: var(--color8);
+    text-align: center;
+}
+.name {
+    padding-top: 10px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.intro {
+    font-family: 'Jua', sans-serif;
+    font-weight: lighter;
+}
+.profile {
+    width: 150px;
+    border: 5px solid var(--color9);
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto;
+}
+
+section {
+    height: 700px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .cube {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: cube 10s infinite paused;
+}
+.cube:hover {
+    animation: cube 10s infinite running;
+}
+.front img {
+    width: 200px;
+    height: 200px;
+    opacity: 1.0;
+}
+.left img {
+    width: 200px;
+    height: 200px;
+    opacity: 1.0;
+}
+.right img {
+    width: 200px;
+    height: 200px;
+    opacity: 1.0;
+}
+.back img {
+    width: 200px;
+    height: 200px;
+    opacity: 1.0;
+}
+.cube .front {
+    transform: translateX(300px) translateZ(100px);
+}
+.cube .left {
+    transform: rotateY(-90deg) translateZ(0px);
+}
+.cube .right {
+    transform: rotateY(90deg) translateZ(0px);
+}
+.cube .back {
+    transform: rotateY(0.5turn) translateX(300px) translateZ(100px);
+}
+@keyframes cube {
+    0% {
+        transform: rotateY(0turn);
+    }
+    100% {
+        transform: rotateY(1turn);
+    }
+}
+
+footer {
+    height: 100px;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    grid-column: span 2;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+a {
+    text-decoration-line: none;
+    color: #000;
+}
+a:hover {
+    color: var(--color9)
+}
+
+@media all and (max-width: 640px) {
+    body {
+        height: 100%;
+    }
+    article {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        height: 350px;
+    }
+    section {
+        width: 100%;
+        height: 600px;
+    }
+}
