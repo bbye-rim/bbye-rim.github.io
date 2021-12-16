@@ -31,7 +31,7 @@ header {
     align-items: center;
 }
 header path {
-    animation: logo 1s linear forwards;
+    animation: logo 2s linear forwards;
 }
 @keyframes logo {
     to {
@@ -126,10 +126,10 @@ section .cube {
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
-    animation: cube 10s infinite paused;
+    animation: cube 8s infinite paused;
 }
 .cube:hover {
-    animation: cube 10s infinite running;
+    animation: cube 8s infinite running;
 }
 .front img {
     width: 200px;
