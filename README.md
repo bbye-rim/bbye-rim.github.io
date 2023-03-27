@@ -7,7 +7,7 @@ Using A Blog Theme by Start Bootstrap :
 ---
 
 사진 사용
--Home page : Unsplash의 Samantha Gades
+- Home page : Unsplash의 Samantha Gades
 - About page : Unsplash의 Mikey Harris
 - Posts page : Unsplash의 RetroSupply
 
